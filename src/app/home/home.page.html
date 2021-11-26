@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title> Climabr </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="10" offset-sm="1" size-md="8" offset-md="2">
+        <ion-searchbar
+          debounce="500"
+          placeholder="Buscar cidade..."
+          #searchInput
+          (ionChange)="onSearch(searchInput.value)"
+        ></ion-searchbar>
+        <app-error-message
+          message="{{errorMessage}}"
+          *ngIf="hasError"
+        ></app-error-message>
+        <ion-list lines="none" *ngIf="!hasError">
+          <app-city-details
+            *ngFor="let city of cities"
+            id="{{city.id}}"
+            name="{{city.name}}"
+            state="{{city.state}}"
+            (selectCity)="onSelectCity($event)"
+          ></app-city-details>
+        </ion-list>
+        <ion-row class="ion-justify-content-between" *ngIf="!isHistoryEmpty"> <!--  -->
+          <ion-text color="medium">
+            <h6>Histórico de consultas</h6>
+          </ion-text>
+          <ion-button size="medium" color="danger" (click)="onClick()"
+            ><ion-icon slot="icon-only" name="trash"></ion-icon
+          ></ion-button>
+        </ion-row>
+        <ion-list lines="none" *ngIf="!hasError">
+          <city-historic-querys
+            *ngFor="let history of histories"
+            id="{{history.id}}"
+            name="{{history.name}}"
+            (selectCity)="onSelectCity($event)"
+          ></city-historic-querys>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
