@@ -45,7 +45,7 @@ const createLoadWeatherService = (http: HttpClient) => {
       useFactory: createLoadWeatherService,
       deps: [HttpClient],
     },
-    { provide: IonicStorageService },
+    { provide: IonicStorageService }, //adicionando para instanciar o local storage do ionic
   ],
   bootstrap: [AppComponent],
 })

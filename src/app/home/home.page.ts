@@ -20,6 +20,7 @@ export class HomePage {
     private readonly storageService: IonicStorageService,
     private readonly router: Router
   ) {}
+  //Verifica se esta vazio ou não e seta o histórico a ser mostrado na renderização vindo do local storage
   async ionViewWillEnter() {
     this.isHistoryEmpty = await this.storageService.isEmpty();
     this.histories = await this.storageService.getHistoric();
@@ -38,7 +39,7 @@ export class HomePage {
   onSelectCity(cityId: string) {
     this.router.navigateByUrl(`/weather/${cityId}`);
   }
-
+  //Limpa o local storage
   onClick() {
     this.storageService.clearHistoric();
     this.ionViewWillEnter();

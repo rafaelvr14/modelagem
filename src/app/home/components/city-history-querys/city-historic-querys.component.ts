@@ -12,7 +12,7 @@ export class CityHistoricQuerysComponent implements OnInit {
   @Output() selectCity: EventEmitter<string> = new EventEmitter();
 
   ngOnInit() {}
-
+  //adicionando evento de "click" para adicionar no local storage a cidade
   onClick() {
     this.selectCity.emit(this.id);
   }
