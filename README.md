@@ -2,9 +2,9 @@
 
 **Alunos: Rafael de Oliveira Fernandes e Renato Figueiredo Pereira**
 
-Uma aplicação simples para consulta à previsão do tempo de cidades brasileiras.
-Esse é um trabalho da disciplina de Modelagem e Implementação de Software da Universidade Federal de Lavras 
-As mudanças feitas no código orinal foram a implementação de um histórico de consultas utilizando a biblioteca LocalStorage.
+Uma aplicação simples para consulta à previsão do tempo de cidades brasileiras.\
+Esse é um trabalho da disciplina de Modelagem e Implementação de Software da Universidade Federal de Lavras.\
+As mudanças feitas no código orinal foram a implementação de um histórico de consultas utilizando a biblioteca LocalStorage.\
 
 # Vídeo apresentação
 
@@ -12,9 +12,9 @@ As mudanças feitas no código orinal foram a implementação de um histórico d
 
 # Pré-requisitos
 
-Node 
-NPM caso não venha no Node
-Ionic
+1. Node 
+2. NPM (caso não venha no Node)
+3. Ionic
 
 # Como usar?
 
