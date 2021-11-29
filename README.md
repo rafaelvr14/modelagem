@@ -4,7 +4,7 @@
 
 Uma aplicação simples para consulta à previsão do tempo de cidades brasileiras.\
 Esse é um trabalho da disciplina de Modelagem e Implementação de Software da Universidade Federal de Lavras.\
-As mudanças feitas no código orinal foram a implementação de um histórico de consultas utilizando a biblioteca LocalStorage.\
+As mudanças feitas no código orinal foram a implementação de um histórico de consultas utilizando a biblioteca LocalStorage.
 
 # Vídeo apresentação
 
